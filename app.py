@@ -202,7 +202,7 @@ if uploaded_file:
             y_pred = model.predict(X)
 
             r2 = r2_score(y, y_pred)
-            rmse = mean_squared_error(y, y_pred, squared=False)
+            rmse = np.sqrt(mean_squared_error(y, y_pred))
 
             st.write(f"**R² Score:** {r2:.4f}")
             st.write(f"**RMSE:** {rmse:.2f}")
