@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 690" role="img" aria-label="Factor profiles for the 2019 top 10 happiness countries">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#17202a}.title{font-size:30px;font-weight:700}.sub{font-size:15px;fill:#5f6b76}.head{font-size:15px;font-weight:700}.country{font-size:16px}.cell{font-size:14px;font-weight:650}</style>
+<text x="55" y="48" class="title">2019 Top-10 Countries — Factor Profile</text>
+<text x="55" y="76" class="sub">Raw WHR values are printed in each cell; color intensity is normalized within each factor column.</text>
+<text x="302.5" y="100" text-anchor="middle" class="head">GDP / capita</text>
+<text x="447.5" y="100" text-anchor="middle" class="head">Social support</text>
+<text x="592.5" y="100" text-anchor="middle" class="head">Life expectancy</text>
+<text x="737.5" y="100" text-anchor="middle" class="head">Freedom</text>
+<text x="882.5" y="100" text-anchor="middle" class="head">Generosity</text>
+<text x="1027.5" y="100" text-anchor="middle" class="head">Corruption</text>
+<text x="215" y="151" text-anchor="end" class="country">Finland</text>
+<rect x="230" y="120" width="140" height="43" rx="5" fill="#c5d7e6"/>
+<text x="300.0" y="149" text-anchor="middle" class="cell" style="fill:#17202a">1.340</text>
+<rect x="375" y="120" width="140" height="43" rx="5" fill="#5c8db5"/>
+<text x="445.0" y="149" text-anchor="middle" class="cell" style="fill:#ffffff">1.587</text>
+<rect x="520" y="120" width="140" height="43" rx="5" fill="#ebf2f8"/>
+<text x="590.0" y="149" text-anchor="middle" class="cell" style="fill:#17202a">0.986</text>
+<rect x="665" y="120" width="140" height="43" rx="5" fill="#3f79a8"/>
+<text x="735.0" y="149" text-anchor="middle" class="cell" style="fill:#ffffff">0.596</text>
+<rect x="810" y="120" width="140" height="43" rx="5" fill="#ebf2f8"/>
+<text x="880.0" y="149" text-anchor="middle" class="cell" style="fill:#17202a">0.153</text>
+<rect x="955" y="120" width="140" height="43" rx="5" fill="#3873a5"/>
+<text x="1025.0" y="149" text-anchor="middle" class="cell" style="fill:#ffffff">0.393</text>
+<text x="215" y="199" text-anchor="end" class="country">Denmark</text>
+<rect x="230" y="168" width="140" height="43" rx="5" fill="#98b8d1"/>
+<text x="300.0" y="197" text-anchor="middle" class="cell" style="fill:#17202a">1.383</text>
+<rect x="375" y="168" width="140" height="43" rx="5" fill="#6e99be"/>
+<text x="445.0" y="197" text-anchor="middle" class="cell" style="fill:#ffffff">1.573</text>
+<rect x="520" y="168" width="140" height="43" rx="5" fill="#ceddea"/>
+<text x="590.0" y="197" text-anchor="middle" class="cell" style="fill:#17202a">0.996</text>
+<rect x="665" y="168" width="140" height="43" rx="5" fill="#4a80ad"/>
+<text x="735.0" y="197" text-anchor="middle" class="cell" style="fill:#ffffff">0.592</text>
+<rect x="810" y="168" width="140" height="43" rx="5" fill="#8db0cc"/>
+<text x="880.0" y="197" text-anchor="middle" class="cell" style="fill:#17202a">0.252</text>
+<rect x="955" y="168" width="140" height="43" rx="5" fill="#2d6ca0"/>
+<text x="1025.0" y="197" text-anchor="middle" class="cell" style="fill:#ffffff">0.410</text>
+<text x="215" y="247" text-anchor="end" class="country">Norway</text>
+<rect x="230" y="216" width="140" height="43" rx="5" fill="#2d6ca0"/>
+<text x="300.0" y="245" text-anchor="middle" class="cell" style="fill:#ffffff">1.488</text>
+<rect x="375" y="216" width="140" height="43" rx="5" fill="#6291b8"/>
+<text x="445.0" y="245" text-anchor="middle" class="cell" style="fill:#ffffff">1.582</text>
+<rect x="520" y="216" width="140" height="43" rx="5" fill="#729cc0"/>
+<text x="590.0" y="245" text-anchor="middle" class="cell" style="fill:#ffffff">1.028</text>
+<rect x="665" y="216" width="140" height="43" rx="5" fill="#2d6ca0"/>
+<text x="735.0" y="245" text-anchor="middle" class="cell" style="fill:#ffffff">0.603</text>
+<rect x="810" y="216" width="140" height="43" rx="5" fill="#7ba3c4"/>
+<text x="880.0" y="245" text-anchor="middle" class="cell" style="fill:#ffffff">0.271</text>
+<rect x="955" y="216" width="140" height="43" rx="5" fill="#598bb4"/>
+<text x="1025.0" y="245" text-anchor="middle" class="cell" style="fill:#ffffff">0.341</text>
+<text x="215" y="295" text-anchor="end" class="country">Iceland</text>
+<rect x="230" y="264" width="140" height="43" rx="5" fill="#9bbad3"/>
+<text x="300.0" y="293" text-anchor="middle" class="cell" style="fill:#17202a">1.380</text>
+<rect x="375" y="264" width="140" height="43" rx="5" fill="#2d6ca0"/>
+<text x="445.0" y="293" text-anchor="middle" class="cell" style="fill:#ffffff">1.624</text>
+<rect x="520" y="264" width="140" height="43" rx="5" fill="#77a0c2"/>
+<text x="590.0" y="293" text-anchor="middle" class="cell" style="fill:#ffffff">1.026</text>
+<rect x="665" y="264" width="140" height="43" rx="5" fill="#4d82ae"/>
+<text x="735.0" y="293" text-anchor="middle" class="cell" style="fill:#ffffff">0.591</text>
+<rect x="810" y="264" width="140" height="43" rx="5" fill="#2d6ca0"/>
+<text x="880.0" y="293" text-anchor="middle" class="cell" style="fill:#ffffff">0.354</text>
+<rect x="955" y="264" width="140" height="43" rx="5" fill="#ebf2f8"/>
+<text x="1025.0" y="293" text-anchor="middle" class="cell" style="fill:#17202a">0.118</text>
+<text x="215" y="343" text-anchor="end" class="country">Netherlands</text>
+<rect x="230" y="312" width="140" height="43" rx="5" fill="#8baecb"/>
+<text x="300.0" y="341" text-anchor="middle" class="cell" style="fill:#17202a">1.396</text>
+<rect x="375" y="312" width="140" height="43" rx="5" fill="#afc7dc"/>
+<text x="445.0" y="341" text-anchor="middle" class="cell" style="fill:#17202a">1.522</text>
+<rect x="520" y="312" width="140" height="43" rx="5" fill="#c5d7e6"/>
+<text x="590.0" y="341" text-anchor="middle" class="cell" style="fill:#17202a">0.999</text>
+<rect x="665" y="312" width="140" height="43" rx="5" fill="#a8c2d9"/>
+<text x="735.0" y="341" text-anchor="middle" class="cell" style="fill:#17202a">0.557</text>
+<rect x="810" y="312" width="140" height="43" rx="5" fill="#4b81ae"/>
+<text x="880.0" y="341" text-anchor="middle" class="cell" style="fill:#ffffff">0.322</text>
+<rect x="955" y="312" width="140" height="43" rx="5" fill="#759fc1"/>
+<text x="1025.0" y="341" text-anchor="middle" class="cell" style="fill:#ffffff">0.298</text>
+<text x="215" y="391" text-anchor="end" class="country">Switzerland</text>
+<rect x="230" y="360" width="140" height="43" rx="5" fill="#5186b1"/>
+<text x="300.0" y="389" text-anchor="middle" class="cell" style="fill:#ffffff">1.452</text>
+<rect x="375" y="360" width="140" height="43" rx="5" fill="#a9c4d9"/>
+<text x="445.0" y="389" text-anchor="middle" class="cell" style="fill:#17202a">1.526</text>
+<rect x="520" y="360" width="140" height="43" rx="5" fill="#2d6ca0"/>
+<text x="590.0" y="389" text-anchor="middle" class="cell" style="fill:#ffffff">1.052</text>
+<rect x="665" y="360" width="140" height="43" rx="5" fill="#7fa6c6"/>
+<text x="735.0" y="389" text-anchor="middle" class="cell" style="fill:#17202a">0.572</text>
+<rect x="810" y="360" width="140" height="43" rx="5" fill="#83a8c7"/>
+<text x="880.0" y="389" text-anchor="middle" class="cell" style="fill:#17202a">0.263</text>
+<rect x="955" y="360" width="140" height="43" rx="5" fill="#588ab4"/>
+<text x="1025.0" y="389" text-anchor="middle" class="cell" style="fill:#ffffff">0.343</text>
+<text x="215" y="439" text-anchor="end" class="country">Sweden</text>
+<rect x="230" y="408" width="140" height="43" rx="5" fill="#94b5d0"/>
+<text x="300.0" y="437" text-anchor="middle" class="cell" style="fill:#17202a">1.387</text>
+<rect x="375" y="408" width="140" height="43" rx="5" fill="#dbe7f0"/>
+<text x="445.0" y="437" text-anchor="middle" class="cell" style="fill:#17202a">1.487</text>
+<rect x="520" y="408" width="140" height="43" rx="5" fill="#a8c3d9"/>
+<text x="590.0" y="437" text-anchor="middle" class="cell" style="fill:#17202a">1.009</text>
+<rect x="665" y="408" width="140" height="43" rx="5" fill="#7aa2c3"/>
+<text x="735.0" y="437" text-anchor="middle" class="cell" style="fill:#ffffff">0.574</text>
+<rect x="810" y="408" width="140" height="43" rx="5" fill="#7fa6c6"/>
+<text x="880.0" y="437" text-anchor="middle" class="cell" style="fill:#17202a">0.267</text>
+<rect x="955" y="408" width="140" height="43" rx="5" fill="#457cab"/>
+<text x="1025.0" y="437" text-anchor="middle" class="cell" style="fill:#ffffff">0.373</text>
+<text x="215" y="487" text-anchor="end" class="country">New Zealand</text>
+<rect x="230" y="456" width="140" height="43" rx="5" fill="#ebf2f8"/>
+<text x="300.0" y="485" text-anchor="middle" class="cell" style="fill:#17202a">1.303</text>
+<rect x="375" y="456" width="140" height="43" rx="5" fill="#82a8c7"/>
+<text x="445.0" y="485" text-anchor="middle" class="cell" style="fill:#17202a">1.557</text>
+<rect x="520" y="456" width="140" height="43" rx="5" fill="#77a0c2"/>
+<text x="590.0" y="485" text-anchor="middle" class="cell" style="fill:#ffffff">1.026</text>
+<rect x="665" y="456" width="140" height="43" rx="5" fill="#5d8db6"/>
+<text x="735.0" y="485" text-anchor="middle" class="cell" style="fill:#ffffff">0.585</text>
+<rect x="810" y="456" width="140" height="43" rx="5" fill="#437caa"/>
+<text x="880.0" y="485" text-anchor="middle" class="cell" style="fill:#ffffff">0.330</text>
+<rect x="955" y="456" width="140" height="43" rx="5" fill="#4079a9"/>
+<text x="1025.0" y="485" text-anchor="middle" class="cell" style="fill:#ffffff">0.380</text>
+<text x="215" y="535" text-anchor="end" class="country">Canada</text>
+<rect x="230" y="504" width="140" height="43" rx="5" fill="#abc5da"/>
+<text x="300.0" y="533" text-anchor="middle" class="cell" style="fill:#17202a">1.365</text>
+<rect x="375" y="504" width="140" height="43" rx="5" fill="#c4d7e6"/>
+<text x="445.0" y="533" text-anchor="middle" class="cell" style="fill:#17202a">1.505</text>
+<rect x="520" y="504" width="140" height="43" rx="5" fill="#5286b1"/>
+<text x="590.0" y="533" text-anchor="middle" class="cell" style="fill:#ffffff">1.039</text>
+<rect x="665" y="504" width="140" height="43" rx="5" fill="#5f8fb7"/>
+<text x="735.0" y="533" text-anchor="middle" class="cell" style="fill:#ffffff">0.584</text>
+<rect x="810" y="504" width="140" height="43" rx="5" fill="#6e9abe"/>
+<text x="880.0" y="533" text-anchor="middle" class="cell" style="fill:#ffffff">0.285</text>
+<rect x="955" y="504" width="140" height="43" rx="5" fill="#6f9abe"/>
+<text x="1025.0" y="533" text-anchor="middle" class="cell" style="fill:#ffffff">0.308</text>
+<text x="215" y="583" text-anchor="end" class="country">Austria</text>
+<rect x="230" y="552" width="140" height="43" rx="5" fill="#a0bdd5"/>
+<text x="300.0" y="581" text-anchor="middle" class="cell" style="fill:#17202a">1.376</text>
+<rect x="375" y="552" width="140" height="43" rx="5" fill="#ebf2f8"/>
+<text x="445.0" y="581" text-anchor="middle" class="cell" style="fill:#17202a">1.475</text>
+<rect x="520" y="552" width="140" height="43" rx="5" fill="#94b5d0"/>
+<text x="590.0" y="581" text-anchor="middle" class="cell" style="fill:#17202a">1.016</text>
+<rect x="665" y="552" width="140" height="43" rx="5" fill="#ebf2f8"/>
+<text x="735.0" y="581" text-anchor="middle" class="cell" style="fill:#17202a">0.532</text>
+<rect x="810" y="552" width="140" height="43" rx="5" fill="#94b5d0"/>
+<text x="880.0" y="581" text-anchor="middle" class="cell" style="fill:#17202a">0.244</text>
+<rect x="955" y="552" width="140" height="43" rx="5" fill="#a4c0d7"/>
+<text x="1025.0" y="581" text-anchor="middle" class="cell" style="fill:#17202a">0.226</text>
+<text x="55" y="650" class="sub">This comparison is limited to the ten highest-scoring countries in 2019; it is not a global causal analysis.</text>
+</svg>
