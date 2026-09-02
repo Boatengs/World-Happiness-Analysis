@@ -1,127 +1,144 @@
-# World Happiness Analysis — Reviewed Project Walkthrough
+# World Happiness Analysis — Animated Dashboard Walkthrough
 
-This walkthrough documents what the current Streamlit application actually computes and how its outputs should be interpreted. The repository does not commit a fixed analysis dataset or saved model-result table, so this file **does not invent a single R², RMSE, or coefficient result**. Those values depend on the CSV uploaded by the user and the filters applied at runtime.
+This project is now designed as a **ready-to-explore analytical dashboard**, not a file-upload utility. The application loads a pinned public mirror of the World Happiness Report historical data automatically, normalizes the changing annual schemas, and opens directly into the visual analysis.
 
 ## 1. Data flow
 
-The application follows this sequence:
-
 ```text
-Uploaded World Happiness CSV
+Pinned WHR historical data
         ↓
-Country → manually mapped Region
+2015–2019 filter
         ↓
-Country / Region filters
+Normalize annual column-name changes
         ↓
-Descriptive charts
+Recover historical region labels where later files omit them
         ↓
-Linear regression on selected filtered rows
+Interactive + animated visual analysis
         ↓
-R² + RMSE + Actual-vs-Predicted chart
+2015–2018 model training
         ↓
-Filtered CSV download
+2019 out-of-time holdout evaluation
 ```
 
 ### What this tells us
 
-The dashboard is interactive rather than a fixed published analysis. Two users can receive different charts and model metrics if they upload different files or select different filters. Any interpretation therefore needs to be tied to the data and filter state that produced it.
+A visitor can open the app and immediately explore the analysis. There is no dependency on a user knowing which CSV to upload or whether that file matches the expected schema.
 
-## 2. Descriptive outputs
+The source URL is pinned to a specific Git commit so the dashboard is reproducible rather than silently changing when an upstream repository changes.
 
-The current application can produce:
+## 2. Animated global happiness map
 
-- a scatter plot of a selected indicator against `Happiness_Score`;
-- happiness-score trends over `Year` when that field is available;
-- a histogram of `Happiness_Score`;
-- average happiness by the application's derived `Region` field.
+The first major output is a Plotly choropleth containing a **Play** control for 2015 through 2019.
 
-### What these outputs mean
-
-A scatter plot can show whether two variables move together in the selected data, but it does **not** establish that one variable causes happiness to rise or fall. The same caution applies to regional averages: they are descriptive summaries of the uploaded observations, not causal estimates.
-
-The histogram is useful for checking the shape and spread of happiness scores before modeling. If the distribution or selected sample changes substantially after filtering, the regression result can change as well.
-
-## 3. Current regression model
-
-The code uses four predictors:
-
-```python
-features = [
-    "GDP_per_Capita",
-    "Social_support",
-    "Freedom",
-    "Corruption_Perception",
-]
-```
-
-It then fits an ordinary least-squares linear regression and displays:
-
-```text
-R² Score: <runtime value>
-RMSE: <runtime value>
-```
-
-### How to interpret R²
-
-R² describes how much of the variation in `Happiness_Score` is explained by the fitted linear relationship **within the data used for evaluation**. A larger value indicates a closer in-sample fit, not proof that the predictors cause happiness and not proof that the model will generalize to new countries or years.
-
-### How to interpret RMSE
-
-RMSE summarizes the typical size of prediction errors in happiness-score units. Lower is better when comparing models evaluated on the same target and comparable data.
-
-## 4. Important modeling limitation in the current code
-
-The application currently fits and evaluates the regression on the **same filtered observations**:
-
-```python
-model.fit(X, y)
-y_pred = model.predict(X)
-
-r2 = r2_score(y, y_pred)
-rmse = np.sqrt(mean_squared_error(y, y_pred))
-```
+Each frame shows country-level happiness score with rank available on hover.
 
 ### What this tells us
 
-These are **in-sample fit metrics**. They are useful for describing how well the fitted line matches the selected data, but they can be optimistic if presented as predictive performance.
+The map is most useful for seeing broad geographic patterns and how those patterns shift over time. It should not be used to imply that neighboring countries are statistically equivalent; it is a geographic view of country-level scores.
 
-A stronger future evaluation would use a train/test split, cross-validation, or a time-aware split when multiple years are available. Until then, the dashboard should describe R² and RMSE as model-fit diagnostics rather than out-of-sample prediction accuracy.
+## 3. Country ranking race
 
-## 5. Region-mapping limitation
+A second animated chart shows the highest-ranked countries for each year.
 
-The application derives `Region` from a manually defined country list. Countries not listed in that dictionary are assigned to `Other`.
+The number of countries displayed can be adjusted from the dashboard sidebar.
 
 ### What this tells us
 
-Regional charts can be incomplete or misleading if the uploaded dataset contains countries outside the hard-coded mapping. A production-quality version should use a comprehensive country-to-region reference table rather than a partial dictionary embedded in the application.
+The ranking animation makes movement at the top of the distribution easier to see than a static five-year table. Because rank is relative, a country's position can change even when its own score moves only modestly.
 
-## 6. Documentation standard for future analysis
+## 4. Regional comparison
 
-When this project is extended, each meaningful output should follow the same pattern used across the newer repositories:
+For the selected snapshot year, the dashboard calculates average happiness score by region. It also plots regional mean scores across the complete 2015–2019 period.
+
+### What this tells us
+
+Regional aggregation helps summarize broad patterns, but averages hide substantial country-level variation. The country map and regional chart should therefore be read together rather than treating the regional mean as representative of every country within that region.
+
+## 5. Animated factor relationships
+
+The dashboard lets the user switch between:
+
+- GDP per capita
+- social support
+- life expectancy
+- freedom
+- generosity
+- perceptions of corruption
+
+For each factor, an animated scatterplot shows how its relationship with happiness score changes across years.
+
+### What this tells us
+
+These plots show **association**, not causation. A positive relationship between a factor and happiness score does not establish that changing that factor alone would produce the observed change in happiness.
+
+## 6. Factor association summary
+
+The app computes Pearson correlations between happiness score and the normalized factor columns across the 2015–2019 data.
+
+### What this tells us
+
+Correlation is a useful descriptive screening tool. It identifies variables that move with happiness score in this dataset, but it does not control for confounding or establish policy effects.
+
+## 7. Out-of-time model evaluation
+
+The previous dashboard fit a regression to the same filtered rows used for evaluation. That can make model quality look stronger than it really is.
+
+The updated model uses:
 
 ```text
-Why this step matters
-        ↓
-Code with purposeful comments
-        ↓
-Actual output / chart
-        ↓
-Markdown: what the result shows
-        ↓
-Markdown: limitation / decision relevance
+Training period: 2015–2018
+Holdout period: 2019
 ```
 
-Comments should explain reasoning, for example:
+Features:
 
-```python
-# Keep the evaluation set separate so the reported error reflects unseen rows,
-# not the same observations the regression used to estimate its coefficients.
+```text
+GDP per capita
+Social support
+Life expectancy
+Freedom
+Perceptions of corruption
 ```
 
-rather than comments that simply restate syntax.
+Outputs displayed in the dashboard:
 
-## 7. Evidence boundary
+- 2019 holdout R²
+- 2019 holdout RMSE
+- 2019 holdout MAE
+- actual-vs-predicted scatterplot
+- fitted coefficient chart
 
-The current repository supports claims about an interactive exploratory dashboard and a working linear-regression workflow. It does **not** contain a committed dataset/result artifact that supports a single permanent R²/RMSE value, and the current in-sample evaluation should not be described as validated predictive accuracy.
+### What this tells us
 
-That distinction makes the project more credible: the dashboard can still be useful for exploration while clearly showing what would need to change before stronger predictive claims are made.
+The error metrics now represent performance on a later year that the model did not use for fitting. That makes them a more meaningful test of whether the earlier-year relationship generalizes to 2019.
+
+The coefficients remain descriptive associations. They should not be described as causal contributions to national happiness.
+
+## 8. Human-readable code standard
+
+Comments in `app.py` are used where they explain analytical intent, such as why region labels are recovered from earlier years or why the model uses a time-based holdout. The code avoids comments that merely repeat obvious syntax.
+
+The dashboard itself also includes interpretation directly below major outputs so a reviewer does not have to infer what each visual is supposed to demonstrate.
+
+## 9. Reproducibility and source
+
+The project uses historical World Happiness Report releases for 2015–2019. The application reads a pinned public combined-data mirror rather than requiring a local upload.
+
+The World Happiness Report provides historical report appendices and data-sharing information for these annual editions.
+
+## 10. Current limitations
+
+- Annual WHR schemas changed across the period and require explicit normalization.
+- Some later-year files omit region, so the dashboard reuses a country's known historical region where possible.
+- Country naming differences can affect geographic rendering for a small number of locations.
+- The linear model is intentionally simple and should be treated as an interpretable baseline.
+- Correlations and regression coefficients are not causal estimates.
+
+## Reviewer path
+
+1. Open `app.py` to see the data normalization and analytical workflow.
+2. Run `streamlit run app.py`.
+3. Press **Play** on the global map and country-ranking charts.
+4. Switch the factor selector and watch the relationships change across years.
+5. Review the 2019 holdout metrics and actual-vs-predicted chart.
+6. Read the interpretation text directly beneath the outputs before drawing conclusions.
