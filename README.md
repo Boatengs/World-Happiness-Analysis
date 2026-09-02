@@ -16,6 +16,22 @@ The project combines animated exploratory analysis with an interpretable regress
 
 ---
 
+## Visual snapshot
+
+The interactive dashboard contains the full animated analysis. The static visuals below are committed README snapshots built from the same pinned World Happiness data so a GitHub reviewer can see real project evidence without running the app first.
+
+![2019 top 10 countries by happiness score](figures/2019_top10_happiness.svg)
+
+**What this shows:** Finland leads the 2019 ranking in the project dataset with a happiness score of **7.769**, followed by Denmark and Norway. The top ten are tightly grouped, which is why the dashboard keeps both the underlying score and the relative rank visible rather than treating rank alone as the analytical result.
+
+![2019 top-10 country factor profile](figures/2019_top10_factor_profile.svg)
+
+**What this shows:** the top-ranked countries do not share one identical factor profile. The cells display the raw 2019 World Happiness factor values, while color intensity is normalized **within each factor column** only to make differences easier to scan. This is a focused comparison of the 2019 top ten—not evidence that any one factor causes higher happiness globally.
+
+These README figures are static summaries. The application itself extends the analysis across all available countries and all five years through animated maps, ranking changes, regional trends, factor scatterplots, correlations, and the 2019 holdout model.
+
+---
+
 ## Analytical workflow
 
 ```text
@@ -244,6 +260,7 @@ The dashboard loads its historical source automatically when the application sta
 ```text
 .
 ├── app.py                  # animated dashboard + analytical workflow
+├── figures/                # code-derived README visuals
 ├── README.md               # project overview and output interpretation
 ├── PROJECT_WALKTHROUGH.md  # deeper reviewer-facing analytical walkthrough
 └── requirements.txt        # Python dependencies
@@ -267,7 +284,7 @@ For a section-by-section explanation of the analytical outputs, see [`PROJECT_WA
 
 # Reviewer path
 
-1. Start with this README for the analytical story.
+1. Start with the README visuals for a quick evidence-first snapshot.
 2. Run `streamlit run app.py`.
 3. Press **Play** on the global happiness map.
 4. Watch the country ranking race across 2015–2019.
